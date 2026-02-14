@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bia & Anna - Loja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="logo">Bia & Anna</div>
+        <div class="menu-icones">
+            <div id="cart-icon" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+            <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-links" id="nav-links">
+        <div class="drawer-header">
+            <h3>Menu</h3>
+            <button onclick="toggleMenu()" class="close-btn">✕</button>
+        </div>
+        <ul>
+            <li><a href="#" onclick="toggleMenu()">🏠 Início</a></li>
+            <li><a href="#produtos" onclick="toggleMenu()">🎀 Produtos</a></li>
+            <li><a href="https://wa.me/557182423915" target="_blank">💬 Suporte</a></li>
+            <hr>
+            <li><a href="https://instagram.com/SEU_USER" target="_blank">📸 Instagram</a></li>
+            <li><a href="https://facebook.com/SEU_USER" target="_blank">👤 Facebook</a></li>
+        </ul>
+    </div>
+
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="drawer-header">
+            <h3>Sua Sacola</h3>
+            <button onclick="toggleCart()" class="close-btn">✕</button>
+        </div>
+        <div id="cart-items">
+            </div>
+        <div class="cart-footer">
+            <p>Total: <strong>R$ <span id="cart-total">0,00</span></strong></p>
+            <button class="btn-finalizar" onclick="enviarWhatsApp()">Finalizar no WhatsApp</button>
+        </div>
+    </div>
+
+    <header class="topo">
+        <img src="logo.jpg" alt="Logo" class="logo-img">
+        <h1>Bia & Anna</h1>
+        <p>Personalizados & Cia</p>
+    </header>
+
+    <main class="vitrine" id="produtos">
+        <div class="card">
+            <img src="laco.jpg" class="foto-produto">
+            <h3>Laço Bela</h3>
+            <span class="preco">R$ 20,00</span>
+            <button class="btn-compra" onclick="adicionarAoCarrinho('Laço Bela', 20)">Adicionar à Sacola</button>
+        </div>
+
+        <div class="card">
+            <img src="tiara.jpg" class="foto-produto">
+            <h3>Tiara Laura</h3>
+            <span class="preco">R$ 20,00</span>
+            <button class="btn-compra" onclick="adicionarAoCarrinho('Tiara Laura', 20)">Adicionar à Sacola</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

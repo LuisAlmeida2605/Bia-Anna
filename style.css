@@ -1,0 +1,54 @@
+/* Reset e Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #121212; color: white; font-family: sans-serif; padding-top: 70px; overflow-x: hidden; }
+
+/* Menu Superior */
+.menu {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 20px; background: #000; position: fixed;
+    top: 0; width: 100%; z-index: 1000; height: 60px;
+    border-bottom: 1px solid #333;
+}
+.logo { color: #FFC0CB; font-weight: bold; font-size: 1.2rem; }
+.menu-icones { display: flex; gap: 20px; align-items: center; }
+
+#cart-icon { cursor: pointer; color: #FFC0CB; position: relative; font-size: 1.2rem; }
+#cart-count { background: red; color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.7rem; position: absolute; top: -10px; right: -10px; }
+
+/* GAVETAS (MENU E CARRINHO) */
+.nav-links, .cart-drawer {
+    position: fixed; top: 0; right: -100%; /* Escondidos fora da tela */
+    width: 280px; height: 100vh; background: #1a1a1a;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 1100; padding: 20px;
+    box-shadow: -10px 0 20px rgba(0,0,0,0.8);
+    border-left: 2px solid #FFC0CB;
+}
+
+.nav-links.active, .cart-drawer.active { right: 0; } /* Faz deslizar para dentro */
+
+.drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; color: #FFC0CB; }
+.close-btn { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+
+/* Estilo dos Links na Gaveta */
+.nav-links ul { list-style: none; }
+.nav-links li { margin: 20px 0; }
+.nav-links a { color: white; text-decoration: none; font-size: 1.1rem; display: block; transition: 0.3s; }
+.nav-links a:hover { color: #FFC0CB; padding-left: 5px; }
+hr { border: 0; border-top: 1px solid #333; margin: 15px 0; }
+
+/* Vitrine e Cards */
+.vitrine { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; }
+.card { background: #1e1e1e; padding: 15px; border-radius: 12px; text-align: center; border: 1px solid #333; }
+.foto-produto { width: 100%; height: 140px; object-fit: cover; border-radius: 8px; }
+.preco { display: block; margin: 10px 0; color: #F8C8DC; font-weight: bold; font-size: 1.1rem; }
+.btn-compra { width: 100%; background: #FFC5C5; border: none; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+.btn-compra:active { transform: scale(0.95); }
+
+/* Rodapé do Carrinho */
+.cart-footer { position: absolute; bottom: 20px; width: calc(100% - 40px); }
+.btn-finalizar { width: 100%; background: #25d366; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; }
+
+/* Banner Topo */
+.topo { text-align: center; padding: 30px 10px; }
+.logo-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid #FFC0CB; margin-bottom: 10px; object-fit: cover; }
+.bar { display: block; width: 25px; height: 3px; background: #FFC0CB; margin: 5px 0; border-radius: 2px; }
